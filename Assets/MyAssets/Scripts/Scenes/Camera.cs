@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraControl : MonoBehaviour {
+public class Camera : MonoBehaviour {
 
     /// <summary>
     /// 戦闘機との距離の差異

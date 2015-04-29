@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StarfighterControl : MonoBehaviour {
+public class Starfighter : MonoBehaviour {
     /// <summary>
     /// 弾
     /// </summary>
@@ -35,7 +35,7 @@ public class StarfighterControl : MonoBehaviour {
     /// <summary>
     /// コンストラクタ
     /// </summary>
-    public StarfighterControl()
+    public Starfighter()
     {
         this.Speed = 1;
         this.IntervalTime = 1;
@@ -102,7 +102,7 @@ public class StarfighterControl : MonoBehaviour {
         {
             Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             Destroy(this.gameObject);
-            GameObject.Find("Main Camera").GetComponent<GameControl>().IsGameOver = true;
+            GameObject.Find("Main Camera").GetComponent<Main>().IsGameOver = true;
         }
     }
 }

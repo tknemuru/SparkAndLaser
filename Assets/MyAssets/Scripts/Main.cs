@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class GameControl : MonoBehaviour {
+public class Main : MonoBehaviour {
 
     public GameObject GameStartButton;
     public GameObject StarFighter;
