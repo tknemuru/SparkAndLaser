@@ -66,7 +66,6 @@
     <Compile Include="Assets\MyAssets\Scripts\Main.cs" />
     <Compile Include="Assets\MyAssets\Scripts\Players\Enemys\Enemy.cs" />
     <Compile Include="Assets\MyAssets\Scripts\Players\Mines\Starfighter.cs" />
-    <Compile Include="Assets\MyAssets\Scripts\Scenes\Camera.cs" />
     <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
