@@ -83,11 +83,16 @@ public class StarfighterControl : MonoBehaviour {
             }
         }
 
+        // プレイヤーの座標を取得
+        Vector3 pos = transform.position;
+        pos.x = Mathf.Clamp(transform.position.x, -35, 35);
+        transform.position = pos;
+
         this.EnemyIntervalTime += Time.deltaTime;
-        if (this.EnemyIntervalTime >= 4.0f)
+        if (this.EnemyIntervalTime >= 0.5f)
         {
             this.EnemyIntervalTime = 0;
-            Instantiate(this.Enemy, new Vector3(transform.position.x, transform.position.y, transform.position.z + 200), Quaternion.identity);
+            Instantiate(this.Enemy, new Vector3(Random.Range(-35.0f, 35.0f), transform.position.y, transform.position.z + 200), Quaternion.identity);
         }
 	}
 
