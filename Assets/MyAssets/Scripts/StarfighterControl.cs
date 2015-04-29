@@ -13,6 +13,11 @@ public class StarfighterControl : MonoBehaviour {
     public GameObject Enemy;
 
     /// <summary>
+    /// 爆発エフェクト
+    /// </summary>
+    public GameObject Explosion;
+
+    /// <summary>
     /// 弾の発射間隔
     /// </summary>
     private float IntervalTime { get; set; }
@@ -85,4 +90,14 @@ public class StarfighterControl : MonoBehaviour {
             Instantiate(this.Enemy, new Vector3(transform.position.x, transform.position.y, transform.position.z + 200), Quaternion.identity);
         }
 	}
+
+    void OnTriggerEnter(Collider coll)
+    {
+        if (coll.gameObject.tag == "EnemyBullet")
+        {
+            Instantiate(Explosion, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            Destroy(this.gameObject);
+            GameObject.Find("Main Camera").GetComponent<GameControl>().IsGameOver = true;
+        }
+    }
 }

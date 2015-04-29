@@ -21,7 +21,7 @@ public class CameraControl : MonoBehaviour {
 	void Update () {
         if (GameObject.Find("SciFi_Fighter_AK5"))
         {
-            Vector3 startVector = GameObject.Find("SciFi_Fighter_AK5").transform.localPosition;
+            Vector3 startVector = GameObject.Find("SciFi_Fighter_AK5(Clone)").transform.localPosition;
             transform.localPosition = new Vector3(this.Difference.x, startVector.y + this.Difference.y, startVector.z + this.Difference.z);
         }
 	}
