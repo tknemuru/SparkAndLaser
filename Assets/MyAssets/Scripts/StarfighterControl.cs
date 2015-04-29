@@ -2,13 +2,25 @@
 using System.Collections;
 
 public class StarfighterControl : MonoBehaviour {
-
+    /// <summary>
+    /// 弾
+    /// </summary>
     public GameObject Bullet;
+
+    /// <summary>
+    /// 敵
+    /// </summary>
+    public GameObject Enemy;
 
     /// <summary>
     /// 弾の発射間隔
     /// </summary>
     private float IntervalTime { get; set; }
+
+    /// <summary>
+    /// 敵の発生間隔
+    /// </summary>
+    private float EnemyIntervalTime { get; set; }
 
     /// <summary>
     /// 移動速度
@@ -22,6 +34,7 @@ public class StarfighterControl : MonoBehaviour {
     {
         this.Speed = 1;
         this.IntervalTime = 1;
+        this.EnemyIntervalTime = 0;
     }
 
     /// <summary>
@@ -63,6 +76,13 @@ public class StarfighterControl : MonoBehaviour {
                 this.IntervalTime = 0.0f;
                 Instantiate(this.Bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
             }
+        }
+
+        this.EnemyIntervalTime += Time.deltaTime;
+        if (this.EnemyIntervalTime >= 4.0f)
+        {
+            this.EnemyIntervalTime = 0;
+            Instantiate(this.Enemy, new Vector3(transform.position.x, transform.position.y, transform.position.z + 200), Quaternion.identity);
         }
 	}
 }

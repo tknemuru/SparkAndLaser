@@ -54,9 +54,6 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
     </Reference>
@@ -64,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Assets\MyAssets\Scripts\Bullet.cs" />
     <Compile Include="Assets\MyAssets\Scripts\CameraControl.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\EnemyControl.cs" />
     <Compile Include="Assets\MyAssets\Scripts\StarfighterControl.cs" />
     <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
   </ItemGroup>
